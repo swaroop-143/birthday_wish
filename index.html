@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Harshitha 🎂</title>
+
+    <style>
+        :root {
+            --pink: #ffacd5;
+            --purple: #d8baff;
+            --mint: #b9f1df;
+            --blue: #b9e8ff;
+            --ink: #783d68;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+            font-family: "Trebuchet MS", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 12% 10%, #fff7c8, transparent 25%),
+                radial-gradient(circle at 90% 18%, #d5f7ff, transparent 25%),
+                linear-gradient(135deg, #fff0f8, #f1eaff, #e9fbff);
+        }
+
+        .sparkles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image: radial-gradient(white 1.5px, transparent 1.5px);
+            background-size: 38px 38px;
+            opacity: .65;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            to {
+                opacity: .2;
+            }
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            width: min(100%, 850px);
+            margin: auto;
+            padding: 25px 14px 40px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 9px 16px;
+            border: 1px solid white;
+            border-radius: 50px;
+            background: #ffffffaa;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 7vw, 4.2rem);
+            line-height: 1.1;
+            margin: 18px 0 10px;
+            color: #e34f9e;
+            text-shadow: 0 4px white, 0 10px 25px #ec8fc855;
+        }
+
+        .intro {
+            line-height: 1.7;
+        }
+
+        .stage {
+            height: 370px;
+            max-width: 650px;
+            margin: 25px auto;
+            border-radius: 30px;
+            border: 2px solid white;
+            background: #ffffff88;
+            box-shadow: 0 18px 55px #b978c32b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stage::before,
+        .stage::after {
+            content: "✦";
+            position: absolute;
+            color: #f5a9d7;
+            font-size: 32px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .stage::before {
+            left: 10%;
+            top: 20%;
+        }
+
+        .stage::after {
+            right: 10%;
+            top: 30%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-15px) rotate(15deg);
+            }
+        }
+
+        .cake-area {
+            position: relative;
+            width: 330px;
+            height: 300px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 25px;
+        }
+
+        .plate {
+            position: absolute;
+            bottom: 25px;
+            width: 320px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(white, #e9dcff 72%, #cbb4f4);
+            border: 2px solid white;
+            box-shadow: 0 8px 0 #c0a3e9, 0 14px 22px #a67ac633;
+        }
+
+        .cake {
+            position: absolute;
+            bottom: 62px;
+            width: 290px;
+            height: 220px;
+            transition: transform .8s, opacity .5s;
+            animation: cakeAppear 1.2s ease-out;
+        }
+
+        @keyframes cakeAppear {
+            from {
+                transform: translateY(70px) scale(.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .cake-side {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            top: 53px;
+            height: 132px;
+            border-radius: 0 0 48% 48% / 0 0 16% 16%;
+            background: linear-gradient(90deg,
+                    #ed8fc8,
+                    #fff0f8,
+                    #ffb9dd,
+                    #ffe6f0,
+                    #d9c4ff,
+                    #a8e8ef);
+            box-shadow:
+                inset 0 -12px 0 #dba0e5,
+                inset 0 -17px 0 #ffffff8a,
+                0 12px 10px #9d5fa633;
+        }
+
+        .cake-side::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 43px;
+            height: 34px;
+            background: linear-gradient(90deg,
+                    #fff0c0,
+                    #ffcae5,
+                    #c7f5e5,
+                    #c6eaff);
+        }
+
+        .cake-top {
+            position: absolute;
+            left: 0;
+            top: 22px;
+            width: 290px;
+            height: 82px;
+            border-radius: 50%;
+            background: linear-gradient(140deg,
+                    #fffbe8,
+                    #ffe0f1,
+                    #ffb8dc,
+                    #d5c1ff,
+                    #b6eff1);
+            border: 3px solid #fff6ff;
+            box-shadow: inset 0 -8px 0 #ffffff75;
+            z-index: 2;
+        }
+
+        .icing-drips {
+            position: absolute;
+            left: 13px;
+            top: 58px;
+            width: 264px;
+            height: 43px;
+            z-index: 3;
+            background: linear-gradient(90deg, #fff5d1, #ffe2f2, #e0d0ff, #c9f7ed);
+            clip-path: polygon(0 0, 100% 0, 100% 38%, 94% 48%, 90% 95%,
+                    84% 47%, 76% 60%, 72% 100%, 65% 47%, 57% 72%,
+                    50% 45%, 42% 92%, 35% 45%, 28% 68%, 21% 100%,
+                    16% 43%, 9% 66%, 0 44%);
+        }
+
+        .cream-dot {
+            position: absolute;
+            z-index: 4;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 25%, white, #fff0c8 45%, #f6a6d4);
+        }
+
+        .berry {
+            position: absolute;
+            z-index: 5;
+            width: 19px;
+            height: 23px;
+            border-radius: 55% 55% 60% 60%;
+            background: radial-gradient(circle at 30% 25%, #ffb1b9, #ed3d75 58%, #b31d5a);
+        }
+
+        .berry::after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 5px;
+            width: 10px;
+            height: 7px;
+            background: #70c98e;
+            clip-path: polygon(50% 100%, 0 0, 40% 20%, 50% 0, 70% 25%, 100% 0);
+        }
+
+        .candle {
+            position: absolute;
+            z-index: 7;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 53px;
+            width: 13px;
+            border-radius: 5px 5px 2px 2px;
+            background: repeating-linear-gradient(135deg, white 0 7px, #ff7dbd 7px 13px);
+        }
+
+        .flame {
+            position: absolute;
+            top: -27px;
+            left: 50%;
+            width: 20px;
+            height: 28px;
+            transform: translateX(-50%);
+            border-radius: 60% 40% 60% 40%;
+            background: radial-gradient(ellipse at 50% 68%,
+                    #fffbd3 0 18%,
+                    #ffcc50 32%,
+                    #ff8b4c 65%,
+                    transparent 72%);
+            filter: drop-shadow(0 0 9px #ffb32f);
+            animation: flicker .55s infinite alternate;
+        }
+
+        @keyframes flicker {
+            to {
+                transform: translateX(-50%) rotate(9deg) scale(1.08);
+            }
+        }
+
+        .cake.out .flame {
+            opacity: 0;
+        }
+
+        .decoration {
+            position: absolute;
+            z-index: 4;
+            top: 44px;
+            left: 30px;
+            width: 8px;
+            height: 4px;
+            border-radius: 5px;
+            background: white;
+            box-shadow:
+                30px 13px #fff17a,
+                65px -3px #baf5e3,
+                100px 15px white,
+                135px 1px #ff8fca,
+                170px 16px #a8dcff,
+                205px 0 #fff0a6,
+                235px 12px white;
+        }
+
+        .cake-half {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: transform .85s, opacity .3s;
+        }
+
+        .cake-half .cake-visual {
+            position: absolute;
+            inset: 0;
+            width: 290px;
+            height: 220px;
+        }
+
+        .cake-half.left {
+            clip-path: inset(0 50% 0 0);
+        }
+
+        .cake-half.right {
+            clip-path: inset(0 0 0 50%);
+        }
+
+        .cake.cut .original {
+            opacity: 0;
+        }
+
+        .cake.cut .cake-half {
+            opacity: 1;
+        }
+
+        .cake.cut .cake-half.left {
+            transform: translateX(-28px) rotate(-2deg);
+        }
+
+        .cake.cut .cake-half.right {
+            transform: translateX(28px) rotate(2deg);
+        }
+
+        .cake.cut .candle {
+            opacity: 0;
+        }
+
+        .message {
+            max-width: 650px;
+            margin: 0 auto 20px;
+            padding: 18px;
+            border-radius: 22px;
+            background: #ffffffb5;
+            border: 1px solid white;
+            box-shadow: 0 10px 30px #b77ec21b;
+            line-height: 1.9;
+        }
+
+        .message strong {
+            color: #d94398;
+        }
+
+        #status {
+            min-height: 28px;
+            font-weight: bold;
+            color: #b44591;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px auto;
+        }
+
+        button {
+            border: 0;
+            cursor: pointer;
+            font: bold 1rem "Trebuchet MS", sans-serif;
+            padding: 13px 18px;
+            border-radius: 50px;
+            color: #713b68;
+            background: linear-gradient(135deg, #ffe0f2, #e4d7ff);
+            box-shadow: 0 5px 0 #c5a0dc;
+            transition: transform .2s;
+        }
+
+        button.primary {
+            background: linear-gradient(135deg, #ffacd8, #ffe2a4, #c4f6ed);
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+        }
+
+        #effects {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .balloon {
+            position: fixed;
+            bottom: -100px;
+            width: 43px;
+            height: 57px;
+            border-radius: 50%;
+            z-index: 9;
+            pointer-events: none;
+            animation: rise var(--duration, 7s) linear forwards;
+        }
+
+        .balloon::before {
+            content: "";
+            position: absolute;
+            top: 55px;
+            left: 21px;
+            height: 45px;
+            border-left: 1px solid #ffffffc7;
+        }
+
+        @keyframes rise {
+            to {
+                transform: translateY(-125vh) rotate(12deg);
+            }
+        }
+
+        footer {
+            font-size: .85rem;
+            opacity: .75;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 20px 10px 32px;
+            }
+
+            .stage {
+                height: 340px;
+            }
+
+            .cake-area {
+                transform: scale(.88);
+            }
+
+            .buttons {
+                gap: 12px;
+            }
+
+            button {
+                width: 92%;
+                max-width: 310px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sparkles"></div>
+    <canvas id="effects"></canvas>
+
+    <main>
+        <div class="pill">
+            ✨ A little birthday magic made just for you ✨
+        </div>
+
+        <h1>Happy Birthday<br>Harshitha! 💖</h1>
+
+        <p class="intro">
+            A sweet cake, beautiful memories, and a sky full of birthday sparkles. 🌈
+        </p>
+
+        <section class="stage">
+            <div class="cake-area">
+                <div class="plate"></div>
+
+                <div class="cake" id="cake">
+                    <div class="cake-visual original">
+                        <div class="cake-side"></div>
+                        <div class="cake-top"></div>
+                        <div class="icing-drips"></div>
+                        <div class="decoration"></div>
+
+                        <span class="cream-dot" style="left:30px;top:42px"></span>
+                        <span class="cream-dot" style="left:72px;top:31px"></span>
+                        <span class="cream-dot" style="left:112px;top:26px"></span>
+                        <span class="cream-dot" style="left:153px;top:29px"></span>
+                        <span class="cream-dot" style="left:198px;top:35px"></span>
+                        <span class="cream-dot" style="left:242px;top:43px"></span>
+
+                        <span class="berry" style="left:52px;top:43px"></span>
+                        <span class="berry" style="left:95px;top:31px"></span>
+                        <span class="berry" style="left:178px;top:32px"></span>
+                        <span class="berry" style="left:220px;top:43px"></span>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="cake-half left">
+                        <div class="cake-visual">
+                            <div class="cake-side"></div>
+                            <div class="cake-top"></div>
+                            <div class="icing-drips"></div>
+                            <div class="decoration"></div>
+                            <span class="cream-dot" style="left:30px;top:42px"></span>
+                            <span class="cream-dot" style="left:112px;top:26px"></span>
+                            <span class="berry" style="left:52px;top:43px"></span>
+                            <span class="berry" style="left:178px;top:32px"></span>
+                        </div>
+                    </div>
+
+                    <div class="cake-half right">
+                        <div class="cake-visual">
+                            <div class="cake-side"></div>
+                            <div class="cake-top"></div>
+                            <div class="icing-drips"></div>
+                            <div class="decoration"></div>
+                            <span class="cream-dot" style="left:198px;top:35px"></span>
+                            <span class="cream-dot" style="left:242px;top:43px"></span>
+                            <span class="berry" style="left:95px;top:31px"></span>
+                            <span class="berry" style="left:220px;top:43px"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="message">
+            🌸 May your special day be filled with beautiful smiles,
+            sweet memories, and endless happiness! 💖✨<br>
+
+            🏡 May you and your family always be blessed with
+            <strong>love, peace, good health, and togetherness.</strong><br>
+
+            🎉 Happy Birthday, Harshitha! May your home overflow
+            with laughter and joy. ❤️
+        </div>
+
+        <div id="status" aria-live="polite">
+            Your round rainbow cake is ready! Make a wish. 🌈
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="primary" onclick="blowCandle()">
+                🕯️ 1. Blow Out Candle
+            </button>
+
+            <button type="button" onclick="cutCake()">
+                🍰 2. Cut the Cake
+            </button>
+
+            <button type="button" class="primary" onclick="birthdayBlast()">
+                🎆 3. Birthday Blast!
+            </button>
+
+            <button type="button" onclick="resetCake()">
+                ↻ Start Again
+            </button>
+        </div>
+
+        <footer>
+            Made with love, pastel colors &amp; birthday magic 🌷
+        </footer>
+    </main>
+
+    <script>
+        const cake = document.getElementById("cake");
+        const statusText = document.getElementById("status");
+        const canvas = document.getElementById("effects");
+        const ctx = canvas.getContext("2d");
+
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        function blowCandle() {
+            cake.classList.add("out");
+
+            statusText.textContent =
+                "Wish sent to the stars! ✨ Happy Birthday, Harshitha! 💖";
+
+            burst(innerWidth / 2, innerHeight / 2, 45);
+        }
+
+        function cutCake() {
+            cake.classList.add("cut");
+
+            statusText.textContent =
+                "The round cake is sliced into two delicious halves! 🍰💗";
+
+            burst(innerWidth / 2, innerHeight / 2, 50);
+        }
+
+        function resetCake() {
+            cake.classList.remove("out", "cut");
+            particles = [];
+
+            document.querySelectorAll(".balloon").forEach(balloon => {
+                balloon.remove();
+            });
+
+            statusText.textContent =
+                "Your round rainbow cake is ready! Make a wish. 🌈";
+        }
+
+        function burst(x, y, count) {
+            const colors = [
+                "#ff83c6",
+                "#ffd76d",
+                "#9cebd5",
+                "#a8dcff",
+                "#c6a8ff",
+                "#ffffff"
+            ];
+
+            for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 5 + 1;
+
+                particles.push({
+                    x: x,
+                    y: y,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed - 1,
+                    life: 85,
+                    max: 85,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    size: Math.random() * 4 + 2
+                });
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles = particles.filter(particle => particle.life > 0);
+
+            for (const p of particles) {
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vy += 0.035;
+                p.life--;
+
+                ctx.globalAlpha = p.life / p.max;
+                ctx.fillStyle = p.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            ctx.globalAlpha = 1;
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        function birthdayBlast() {
+            statusText.textContent =
+                "🎉 HAPPY BIRTHDAY, HARSHITHA! 🎆💖";
+
+            // Fireworks
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    burst(
+                        Math.random() * window.innerWidth,
+                        Math.random() * window.innerHeight * 0.65,
+                        65
+                    );
+                }, i * 230);
+            }
+
+            // Colorful floating balloons
+            const colors = [
+                "#ff9ed2",
+                "#b9a1ff",
+                "#9fe8ff",
+                "#ffe08a",
+                "#a9f2d6",
+                "#ffb39c"
+            ];
+
+            for (let i = 0; i < 24; i++) {
+                setTimeout(() => {
+                    const balloon = document.createElement("div");
+                    balloon.className = "balloon";
+
+                    const color = colors[i % colors.length];
+
+                    balloon.style.background = color;
+                    balloon.style.color = color;
+                    balloon.style.left = Math.random() * 95 + "vw";
+
+                    balloon.style.setProperty(
+                        "--duration",
+                        (5 + Math.random() * 4) + "s"
+                    );
+
+                    document.body.appendChild(balloon);
+
+                    setTimeout(() => balloon.remove(), 10000);
+                }, i * 120);
+            }
+        }
+    </script>
+</body>
+
+</html>
